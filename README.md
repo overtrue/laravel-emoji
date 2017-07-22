@@ -32,6 +32,7 @@ Emoji::toShort('😄'); // :smile:
 Emoji::shortnameToUnicode(':smile:'); // 😄
 
 // using helper
+// default transform shorname to unicode, you can change it in config file.
 emoji(':smile:'); // 😄
 
 // access emoji services, return \Emojione\Client instance.
