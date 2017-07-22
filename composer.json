@@ -1,0 +1,32 @@
+{
+    "name": "overtrue/laravel-emoji",
+    "description": "An emojione bridge for Laravel 5.",
+    "type": "library",
+    "require": {
+        "emojione/emojione": "^3.1",
+        "php": ">=5.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "overtrue",
+            "email": "anzhengchao@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Overtrue\\LaravelEmoji\\": "src"
+        },
+        "files": ["src/helpers.php"]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Overtrue\\LaravelEmoji\\EmojiServiceProvider"
+            ],
+            "aliases": {
+                "Emoji": "Overtrue\\LaravelEmoji\\Emoji"
+            }
+        }
+    }
+}
