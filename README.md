@@ -1,6 +1,6 @@
 <h1 align="center"> Laravel Emoji </h1>
 
-:smile: This package assist you in getting started using emoji easily.
+<p align="center">This package assist you in getting started using emoji easily.</p>
 
 ## Installing
 
