@@ -21,7 +21,7 @@ Overtrue\LaravelEmoji\EmojiServiceProvider::class,
 ### Add alias
 
 ```php
-'Emoji' => Overtrue\LaravelEmoji\\Emoji::class,
+'Emoji' => Overtrue\LaravelEmoji\Emoji::class,
 ```
 
 ## Usage
