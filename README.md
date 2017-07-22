@@ -4,7 +4,7 @@
 
 ## Installing
 
-```php
+```shell
 $ composer require overtrue/laravel-emoji
 ```
 
