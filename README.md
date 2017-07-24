@@ -43,7 +43,7 @@ app(\Emojione\Client::class);
 
 ### Configurations && emoji images
 
-```php
+```shell
 // config
 $ php artisan vendor:publish --provider="Overtrue\\LaravelEmoji\\EmojiServiceProvider" --tag=config
 
