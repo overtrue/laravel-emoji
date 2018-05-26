@@ -34,21 +34,11 @@ class EmojiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $root = dirname(__DIR__);
-
         if (!file_exists(config_path('emoji.php'))) {
             $this->publishes([
-                $root.'/config/emoji.php' => config_path('emoji.php'),
-            ], 'config');
+                __DIR__.'/config/emoji.php' => config_path('emoji.php'),
+            ], 'laravel-emoji');
         }
-
-        $this->publishes([
-            base_path('vendor/emojione/assets/png') => public_path('vendor/emojione/png'),
-        ], 'public');
-
-        $this->publishes([
-            base_path('vendor/emojione/assets/sprites') => public_path('vendor/emojione/sprites'),
-        ], 'sprites');
 
         $this->registerBladeDirectiveIfNeeded();
     }
