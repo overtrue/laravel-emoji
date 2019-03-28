@@ -3,7 +3,7 @@
     "description": "An emojione bridge for Laravel 5.",
     "type": "library",
     "require": {
-        "emojione/emojione": "^3.1",
+        "emojione/emojione": "^3.1 || ^4.0",
         "php": ">=5.5"
     },
     "license": "MIT",
