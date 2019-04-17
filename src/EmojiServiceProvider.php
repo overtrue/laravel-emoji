@@ -36,7 +36,7 @@ class EmojiServiceProvider extends ServiceProvider
     {
         if (!file_exists(config_path('emoji.php'))) {
             $this->publishes([
-                __DIR__.'/config/emoji.php' => config_path('emoji.php'),
+                __DIR__.'/../config/emoji.php' => config_path('emoji.php'),
             ], 'laravel-emoji');
         }
 
