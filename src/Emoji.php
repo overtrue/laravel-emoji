@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Facade;
  *
  * @author overtrue <i@overtrue.me>
  *
- * @method string toImage(string $string)               Convert Native Unicode Emoji and Shortnames Directly to Images.
- * @method string toShort(string $string)               Convert Native Unicode Emoji to Shortnames.
- * @method string unicodeToImage(string $string)        Convert Native Unicode Emoji Directly to Images.
- * @method string shortnameToImage(string $string)      Convert Shortnames to Images.
- * @method string shortnameToUnicode(string $string)    Convert Shortnames to Native Unicode.
+ * @method static string toImage(string $string)               Convert Native Unicode Emoji and Shortnames Directly to Images.
+ * @method static string toShort(string $string)               Convert Native Unicode Emoji to Shortnames.
+ * @method static string unicodeToImage(string $string)        Convert Native Unicode Emoji Directly to Images.
+ * @method static string shortnameToImage(string $string)      Convert Shortnames to Images.
+ * @method static string shortnameToUnicode(string $string)    Convert Shortnames to Native Unicode.
  */
 class Emoji extends Facade
 {
