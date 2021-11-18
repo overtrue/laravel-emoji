@@ -2,6 +2,8 @@
 
 <p align="center"> :smile: This package assist you in getting started with emoji easily.</p>
 
+[![Sponsor me](https://raw.githubusercontent.com/overtrue/overtrue/master/sponsor-me-button-s.svg)](https://github.com/sponsors/overtrue)
+
 ## Installing
 
 ```shell
