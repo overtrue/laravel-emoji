@@ -1,6 +1,11 @@
-<h1 align="center"> Laravel Emoji </h1>
+# Laravel Emoji
 
-<p align="center"> :smile: This package assist you in getting started with emoji easily.</p>
+:smile: This package assist you in getting started with emoji easily.
+
+![Laravel Octane Ready Status](https://img.shields.io/badge/Octance-ready-green?style=flat-square)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/overtrue/laravel-emoji?style=flat-square)
+![GitHub License](https://img.shields.io/github/license/overtrue/laravel-emoji?style=flat-square)
+![Packagist Downloads](https://img.shields.io/packagist/dt/overtrue/laravel-emoji?style=flat-square)
 
 [![Sponsor me](https://github.com/overtrue/overtrue/blob/master/sponsor-me-button-s.svg?raw=true)](https://github.com/sponsors/overtrue)
 
@@ -8,22 +13,6 @@
 
 ```shell
 $ composer require overtrue/laravel-emoji
-```
-
-> Laravel 5.5 auto-discovery supported.
-
-If you are using < laravel 5.5
-
-### Add service provider
-
-```php
-Overtrue\LaravelEmoji\EmojiServiceProvider::class,
-```
-
-### Add alias
-
-```php
-'Emoji' => Overtrue\LaravelEmoji\Emoji::class,
 ```
 
 ## Usage

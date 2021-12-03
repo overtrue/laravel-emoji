@@ -50,7 +50,7 @@ class EmojiServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(dirname(__DIR__).'/config/emoji.php', 'emoji');
 
-        $this->app->singleton(Client::class, function () {
+        $this->app->bind(Client::class, function () {
             $client = new Client(new Ruleset());
 
             if ($path = config('emoji.options.image_path')) {
