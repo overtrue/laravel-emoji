@@ -1,10 +1,9 @@
 {
     "name": "overtrue/laravel-emoji",
-    "description": "An emojione bridge for Laravel 5.",
+    "description": "An emojione bridge for Laravel.",
     "type": "library",
     "require": {
-        "emojione/emojione": "^3.1 || ^4.0",
-        "php": ">=5.5"
+        "joypixels/emoji-toolkit": "^6.6"
     },
     "license": "MIT",
     "authors": [
@@ -17,7 +16,9 @@
         "psr-4": {
             "Overtrue\\LaravelEmoji\\": "src"
         },
-        "files": ["src/helpers.php"]
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {
@@ -27,6 +28,35 @@
             "aliases": {
                 "Emoji": "Overtrue\\LaravelEmoji\\Emoji"
             }
+        },
+        "hooks": {
+            "pre-commit": [
+                "composer test",
+                "composer check-style"
+            ],
+            "pre-push": [
+                "composer test",
+                "composer check-style"
+            ]
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "cghooks update"
+        ],
+        "post-merge": "composer install",
+        "post-install-cmd": [
+            "cghooks add --ignore-lock",
+            "cghooks update"
+        ],
+        "cghooks": "vendor/bin/cghooks",
+        "check-style": "php-cs-fixer fix --using-cache=no --diff --dry-run --ansi",
+        "fix-style": "php-cs-fixer fix --using-cache=no --ansi",
+        "test": "vendor/bin/phpunit"
+    },
+    "scripts-descriptions": {
+        "test": "Run all tests.",
+        "check-style": "Run style checks (only dry run - no fixing!).",
+        "fix-style": "Run style checks and fix violations."
     }
 }

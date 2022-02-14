@@ -32,17 +32,11 @@ app('emoji');
 app(\Emojione\Client::class);
 ```
 
-### Configurations && emoji images
+### Configurations
 
 ```shell
 // config
 $ php artisan vendor:publish --provider="Overtrue\\LaravelEmoji\\EmojiServiceProvider" --tag=config
-
-// png images
-$ php artisan vendor:publish --provider="Overtrue\\LaravelEmoji\\EmojiServiceProvider" --tag=public
-
-// sprites images
-$ php artisan vendor:publish --provider="Overtrue\\LaravelEmoji\\EmojiServiceProvider" --tag=sprites
 ```
 
 ## :heart: Sponsor me 

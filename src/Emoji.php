@@ -1,24 +1,11 @@
 <?php
 
-/*
- * This file is part of the overtrue/laravel-emoji.
- *
- * (c) overtrue <i@overtrue.me>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
-
 namespace Overtrue\LaravelEmoji;
 
-use Emojione\Client;
 use Illuminate\Support\Facades\Facade;
+use JoyPixels\Client;
 
 /**
- * Class Emoji.
- *
- * @author overtrue <i@overtrue.me>
- *
  * @method static string toImage(string $string)               Convert Native Unicode Emoji and Shortnames Directly to Images.
  * @method static string toShort(string $string)               Convert Native Unicode Emoji to Shortnames.
  * @method static string unicodeToImage(string $string)        Convert Native Unicode Emoji Directly to Images.
