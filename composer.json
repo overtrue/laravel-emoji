@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "laravel/framework": "^9.0|^10.0",
-        "joypixels/emoji-toolkit": "^6.6"
+        "joypixels/emoji-toolkit": "^6.6 || ^7.0"
     },
     "license": "MIT",
     "authors": [
