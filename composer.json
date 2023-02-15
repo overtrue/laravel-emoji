@@ -3,6 +3,7 @@
     "description": "An emojione bridge for Laravel.",
     "type": "library",
     "require": {
+        "laravel/framework": "^9.0|^10.0",
         "joypixels/emoji-toolkit": "^6.6"
     },
     "license": "MIT",
@@ -31,11 +32,9 @@
         },
         "hooks": {
             "pre-commit": [
-                "composer test",
                 "composer check-style"
             ],
             "pre-push": [
-                "composer test",
                 "composer check-style"
             ]
         }
@@ -50,13 +49,16 @@
             "cghooks update"
         ],
         "cghooks": "vendor/bin/cghooks",
-        "check-style": "php-cs-fixer fix --using-cache=no --diff --dry-run --ansi",
-        "fix-style": "php-cs-fixer fix --using-cache=no --ansi",
+        "check-style": "vendor/bin/pint --test",
+        "fix-style": "vendor/bin/pint",
         "test": "vendor/bin/phpunit"
     },
     "scripts-descriptions": {
         "test": "Run all tests.",
         "check-style": "Run style checks (only dry run - no fixing!).",
         "fix-style": "Run style checks and fix violations."
+    },
+    "require-dev": {
+        "laravel/pint": "*"
     }
 }
