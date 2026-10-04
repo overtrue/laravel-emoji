@@ -2,6 +2,7 @@
 
 namespace Overtrue\LaravelEmoji;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use JoyPixels\Client;
 use JoyPixels\Ruleset;
@@ -26,7 +27,7 @@ class EmojiServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(dirname(__DIR__).'/config/emoji.php', 'emoji');
 
         $this->app->bind(Client::class, function () {
-            $client = new Client(new Ruleset());
+            $client = new Client(new Ruleset);
 
             if ($path = \config('emoji.options.image_path')) {
                 $client->imagePathPNG = $path;
@@ -54,7 +55,7 @@ class EmojiServiceProvider extends ServiceProvider
     protected function registerBladeDirectiveIfNeeded()
     {
         if (class_exists('Illuminate\Support\Facades\Blade')) {
-            \Illuminate\Support\Facades\Blade::directive('emoji', function ($expression) {
+            Blade::directive('emoji', function ($expression) {
                 return "<?php echo emoji({$expression}); ?>";
             });
         }

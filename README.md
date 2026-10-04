@@ -9,6 +9,11 @@
 
 [![Sponsor me](https://github.com/overtrue/overtrue/blob/master/sponsor-me-button-s.svg?raw=true)](https://github.com/sponsors/overtrue)
 
+## Requirements
+
+Version 3 requires PHP 8.3 or newer (PHP 8.x) and Laravel 13.
+Laravel 9, 10, 11, and 12 are not supported by version 3.
+
 ## Installing
 
 ```shell
@@ -23,20 +28,34 @@ Emoji::toShort('😄'); // :smile:
 Emoji::shortnameToUnicode(':smile:'); // 😄
 
 // using helper
-// default transform shorname to unicode, you can change it in config file.
+// default transform shortname to unicode, you can change it in config file.
 emoji(':smile:'); // 😄
 
-// access emoji services, return \Emojione\Client instance.
+// access emoji services, return \JoyPixels\Client instance.
 app('emoji');
 // or 
-app(\Emojione\Client::class);
+app(\JoyPixels\Client::class);
 ```
 
 ### Configurations
 
 ```shell
 // config
-$ php artisan vendor:publish --provider="Overtrue\\LaravelEmoji\\EmojiServiceProvider" --tag=config
+$ php artisan vendor:publish --provider="Overtrue\\LaravelEmoji\\EmojiServiceProvider" --tag=laravel-emoji
+```
+
+## Upgrading to version 3
+
+Upgrade the application to Laravel 13 and PHP 8.3 or newer before installing version 3.
+The helper, facade, Blade directive, and `config/emoji.php` options retain their existing APIs.
+The helper now resolves the same JoyPixels client as the facade and container alias.
+
+The unused Composer git-hook scripts have been removed. Contributors can run the checks directly:
+
+```shell
+composer install
+composer test
+composer check-style
 ```
 
 ## :heart: Sponsor me 

@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-use Emojione\Client;
+use JoyPixels\Client;
 
 if (! function_exists('emoji')) {
     /**
-     * Convert emoji shortname to image.
+     * Convert emoji using the configured helper method.
      *
      * @param  string  $shortname
      * @return string
