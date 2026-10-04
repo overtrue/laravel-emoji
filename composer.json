@@ -3,7 +3,8 @@
     "description": "An emojione bridge for Laravel.",
     "type": "library",
     "require": {
-        "laravel/framework": "^9.0|^10.0|^11.0",
+        "php": "^8.3",
+        "laravel/framework": "^13.0",
         "joypixels/emoji-toolkit": "^6.6"
     },
     "license": "MIT",
@@ -29,26 +30,9 @@
             "aliases": {
                 "Emoji": "Overtrue\\LaravelEmoji\\Emoji"
             }
-        },
-        "hooks": {
-            "pre-commit": [
-                "composer check-style"
-            ],
-            "pre-push": [
-                "composer check-style"
-            ]
         }
     },
     "scripts": {
-        "post-update-cmd": [
-            "cghooks update"
-        ],
-        "post-merge": "composer install",
-        "post-install-cmd": [
-            "cghooks add --ignore-lock",
-            "cghooks update"
-        ],
-        "cghooks": "vendor/bin/cghooks",
         "check-style": "vendor/bin/pint --test",
         "fix-style": "vendor/bin/pint",
         "test": "vendor/bin/phpunit"
@@ -59,6 +43,8 @@
         "fix-style": "Run style checks and fix violations."
     },
     "require-dev": {
-        "laravel/pint": "*"
+        "laravel/pint": "*",
+        "orchestra/testbench": "^11.0",
+        "phpunit/phpunit": "^12.5"
     }
 }
